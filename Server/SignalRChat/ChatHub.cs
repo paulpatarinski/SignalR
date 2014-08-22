@@ -5,7 +5,7 @@ namespace SignalRChat
 {
     public class ChatHub : Hub
     {
-        public void Send(SignalRMessage message)
+        public void SendToAll(SignalRMessage message)
         {
             // Call the broadcastMessage method to update clients.
             Clients.All.broadcastMessage(message.Name, message.Message);
